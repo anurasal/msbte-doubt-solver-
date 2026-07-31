@@ -21,7 +21,7 @@
       "subjects": [
         { "id": "data-structures", "name": "Data Structures Using C", "status": "coming-soon" },
         { "id": "oop-java", "name": "Object Oriented Programming with Java", "status": "coming-soon" },
-        { "id": "computer-networks", "name": "Data Communication and Computer Networks", "status": "coming-soon" }
+        { "id": "database-management", "name": "Database Management System", "status": "coming-soon" }
       ]
     },
     {
@@ -29,7 +29,7 @@
       "subjects": [
         { "id": "microprocessor-8086", "name": "Microprocessor (8086)", "status": "available" },
         { "id": "java-programming", "name": "Java Programming", "status": "coming-soon" },
-        { "id": "database-management", "name": "Database Management System", "status": "coming-soon" }
+       { "id": "computer-networks", "name": "Data Communication and Computer Networks", "status": "available" }
       ]
     },
     {

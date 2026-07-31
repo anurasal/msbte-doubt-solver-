@@ -1,0 +1,193 @@
+{
+  "subjectId": "computer-networks",
+  "subjectName": "Data Communication and Computer Network (314318)",
+  "semester": 4,
+  "status": "available",
+  "chapters": [
+    {
+      "id": "u1",
+      "title": { "en": "Unit I: Fundamentals of Data Communication and Computer Network", "hi": "यूनिट 1: डेटा संचार और कंप्यूटर नेटवर्क की मूल बातें", "mr": "युनिट 1: डेटा कम्युनिकेशन आणि कॉम्प्युटर नेटवर्कची मूलतत्त्वे" },
+      "notes": [
+        {
+          "topic": { "en": "Data Communication System and Its Components", "hi": "डेटा संचार प्रणाली और उसके घटक", "mr": "डेटा कम्युनिकेशन सिस्टम आणि त्याचे घटक" },
+          "content": {
+            "en": "A data communication system has 5 components: message (the data to send), sender, receiver, transmission medium (the physical path), and a protocol (agreed rules governing communication). Key performance measures are bandwidth (data capacity), throughput (actual achieved rate), and latency (delay), along with jitter (variation in delay).",
+            "hi": "एक डेटा संचार प्रणाली में 5 घटक होते हैं: संदेश, प्रेषक, प्राप्तकर्ता, संचरण माध्यम, और एक प्रोटोकॉल। प्रमुख प्रदर्शन माप हैं बैंडविड्थ, थ्रूपुट और विलंबता।",
+            "mr": "डेटा कम्युनिकेशन सिस्टममध्ये 5 घटक असतात: संदेश, प्रेषक, प्राप्तकर्ता, ट्रान्समिशन माध्यम, आणि प्रोटोकॉल. मुख्य कामगिरी मापदंड आहेत बँडविड्थ, थ्रूपुट आणि विलंब."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Data Flow: Simplex, Half-Duplex, Full-Duplex", "hi": "डेटा प्रवाह: सिम्प्लेक्स, हाफ-डुप्लेक्स, फुल-डुप्लेक्स", "mr": "डेटा फ्लो: सिम्प्लेक्स, हाफ-डुप्लेक्स, फुल-डुप्लेक्स" },
+          "content": {
+            "en": "Simplex allows data flow in one direction only (e.g. keyboard to CPU). Half-duplex allows both directions but not simultaneously (e.g. walkie-talkie). Full-duplex allows simultaneous two-way communication (e.g. telephone call).",
+            "hi": "सिम्प्लेक्स केवल एक दिशा में डेटा प्रवाह की अनुमति देता है। हाफ-डुप्लेक्स दोनों दिशाओं की अनुमति देता है लेकिन एक साथ नहीं। फुल-डुप्लेक्स एक साथ दोनों दिशाओं में संचार की अनुमति देता है।",
+            "mr": "सिम्प्लेक्स फक्त एका दिशेने डेटा फ्लोला परवानगी देते. हाफ-डुप्लेक्स दोन्ही दिशांना परवानगी देते पण एकाच वेळी नाही. फुल-डुप्लेक्स एकाच वेळी दोन्ही दिशांनी कम्युनिकेशनला परवानगी देते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Network Types: LAN, MAN, WAN", "hi": "नेटवर्क प्रकार: LAN, MAN, WAN", "mr": "नेटवर्क प्रकार: LAN, MAN, WAN" },
+          "content": {
+            "en": "A LAN covers a small area like a single building/campus with high speed and low cost. A MAN spans a city, connecting multiple LANs. A WAN spans countries/continents, typically using leased lines or satellite links, with comparatively lower speed and higher cost than LAN.",
+            "hi": "LAN एक छोटे क्षेत्र को कवर करता है। MAN एक शहर तक फैला होता है, कई LAN को जोड़ता है। WAN देशों/महाद्वीपों तक फैला होता है।",
+            "mr": "LAN एका लहान क्षेत्राला कव्हर करते. MAN एका शहरापर्यंत पसरलेले असते, अनेक LANs जोडते. WAN देश/खंडांपर्यंत पसरलेले असते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Network Topologies (Introduction)", "hi": "नेटवर्क टोपोलॉजी (परिचय)", "mr": "नेटवर्क टोपोलॉजी (ओळख)" },
+          "content": {
+            "en": "Topology describes the physical/logical arrangement of nodes: bus (single shared cable), star (central hub, most common today), ring (nodes in a closed loop), and mesh (every node connected to every other, most fault-tolerant but most expensive). Covered in more depth in Unit V.",
+            "hi": "टोपोलॉजी नोड्स की व्यवस्था का वर्णन करती है: बस, स्टार, रिंग, और मेश। यूनिट 5 में अधिक विस्तार से कवर किया गया है।",
+            "mr": "टोपोलॉजी नोड्सची मांडणी वर्णन करते: बस, स्टार, रिंग, आणि मेश. युनिट 5 मध्ये अधिक तपशीलवार कव्हर केले आहे."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "State the five components of a data communication system.", "hi": "डेटा संचार प्रणाली के पांच घटकों को बताएं।", "mr": "डेटा कम्युनिकेशन सिस्टमचे पाच घटक सांगा." } },
+        { "year": 2023, "question": { "en": "Differentiate between LAN, MAN and WAN.", "hi": "LAN, MAN और WAN के बीच अंतर बताएं।", "mr": "LAN, MAN आणि WAN मधील फरक सांगा." } }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": { "en": "Unit II: Transmission Media and Switching", "hi": "यूनिट 2: संचरण माध्यम और स्विचिंग", "mr": "युनिट 2: ट्रान्समिशन मीडिया आणि स्विचिंग" },
+      "notes": [
+        {
+          "topic": { "en": "Guided Media: Twisted Pair, Coaxial, Fiber Optic", "hi": "गाइडेड माध्यम: ट्विस्टेड पेयर, कोएक्सियल, फाइबर ऑप्टिक", "mr": "गाइडेड मीडिया: ट्विस्टेड पेअर, कोएक्सियल, फायबर ऑप्टिक" },
+          "content": {
+            "en": "Twisted pair cable (UTP/STP) is cheap, easy to install, but limited range and susceptible to interference. Coaxial cable offers better shielding and higher bandwidth than twisted pair. Fiber optic uses light signals through glass/plastic strands — highest bandwidth, immune to electromagnetic interference, but most expensive and harder to install/splice.",
+            "hi": "ट्विस्टेड पेयर केबल सस्ती है लेकिन सीमित रेंज की है। कोएक्सियल केबल बेहतर शील्डिंग प्रदान करता है। फाइबर ऑप्टिक कांच/प्लास्टिक के माध्यम से प्रकाश संकेतों का उपयोग करता है — उच्चतम बैंडविड्थ लेकिन सबसे महंगा।",
+            "mr": "ट्विस्टेड पेअर केबल स्वस्त आहे पण मर्यादित रेंजची आहे. कोएक्सियल केबल चांगले शील्डिंग देते. फायबर ऑप्टिक काच/प्लास्टिकद्वारे प्रकाश सिग्नल्स वापरते — सर्वाधिक बँडविड्थ पण सर्वात महाग."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Unguided Media: Radio, Microwave, Infrared", "hi": "अनगाइडेड माध्यम: रेडियो, माइक्रोवेव, इन्फ्रारेड", "mr": "अनगाइडेड मीडिया: रेडिओ, मायक्रोवेव्ह, इन्फ्रारेड" },
+          "content": {
+            "en": "Radio waves travel in all directions and pass through walls, good for broadcast. Microwaves travel in a straight line (line-of-sight), used for point-to-point links like satellite communication. Infrared has very short range and cannot pass through walls, used for remote controls and short-range device communication.",
+            "hi": "रेडियो तरंगें सभी दिशाओं में यात्रा करती हैं। माइक्रोवेव सीधी रेखा में यात्रा करते हैं। इन्फ्रारेड की सीमा बहुत कम होती है और दीवारों को पार नहीं कर सकता।",
+            "mr": "रेडिओ लाटा सर्व दिशांनी प्रवास करतात. मायक्रोवेव्ह सरळ रेषेत प्रवास करतात. इन्फ्रारेडची रेंज खूप कमी असते आणि भिंतींमधून जाऊ शकत नाही."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Switching Techniques: Circuit, Packet, Message", "hi": "स्विचिंग तकनीक: सर्किट, पैकेट, संदेश", "mr": "स्विचिंग तंत्रे: सर्किट, पॅकेट, मेसेज" },
+          "content": {
+            "en": "Circuit switching (e.g. traditional telephone) reserves a dedicated path for the entire call duration — guaranteed bandwidth but wasteful when idle. Packet switching breaks data into packets routed independently (used in the internet) — more efficient bandwidth use but variable delay. Message switching stores an entire message at each node before forwarding (store-and-forward), largely obsolete today.",
+            "hi": "सर्किट स्विचिंग पूरी कॉल अवधि के लिए एक समर्पित पथ आरक्षित करता है। पैकेट स्विचिंग डेटा को पैकेटों में तोड़ता है जो स्वतंत्र रूप से रूट किए जाते हैं। संदेश स्विचिंग प्रत्येक नोड पर पूरे संदेश को संग्रहीत करता है।",
+            "mr": "सर्किट स्विचिंग संपूर्ण कॉल कालावधीसाठी समर्पित मार्ग राखून ठेवते. पॅकेट स्विचिंग डेटाला पॅकेट्समध्ये विभागते जे स्वतंत्रपणे रूट केले जातात. मेसेज स्विचिंग प्रत्येक नोडवर संपूर्ण संदेश साठवते."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "Compare guided and unguided transmission media.", "hi": "गाइडेड और अनगाइडेड संचरण माध्यम की तुलना करें।", "mr": "गाइडेड आणि अनगाइडेड ट्रान्समिशन मीडियाची तुलना करा." } },
+        { "year": 2023, "question": { "en": "Explain circuit switching and packet switching with a diagram.", "hi": "चित्र सहित सर्किट स्विचिंग और पैकेट स्विचिंग को समझाएं।", "mr": "आकृतीसह सर्किट स्विचिंग आणि पॅकेट स्विचिंग स्पष्ट करा." } }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": { "en": "Unit III: Error Detection, Correction and Wireless Communication", "hi": "यूनिट 3: त्रुटि पहचान, सुधार और वायरलेस संचार", "mr": "युनिट 3: एरर डिटेक्शन, करेक्शन आणि वायरलेस कम्युनिकेशन" },
+      "notes": [
+        {
+          "topic": { "en": "Error Detection: Parity Check and CRC", "hi": "त्रुटि पहचान: पैरिटी चेक और CRC", "mr": "एरर डिटेक्शन: पॅरिटी चेक आणि CRC" },
+          "content": {
+            "en": "Parity check adds one extra bit so the total number of 1s is even (even parity) or odd (odd parity) — detects single-bit errors only. Cyclic Redundancy Check (CRC) divides data by a fixed generator polynomial and appends the remainder; the receiver performs the same division and checks for a zero remainder, catching a much wider range of errors than simple parity.",
+            "hi": "पैरिटी चेक एक अतिरिक्त बिट जोड़ता है ताकि 1s की कुल संख्या सम या विषम हो। CRC डेटा को एक निश्चित जनरेटर बहुपद से विभाजित करता है और शेष को जोड़ता है।",
+            "mr": "पॅरिटी चेक एक अतिरिक्त बिट जोडते जेणेकरून 1s ची एकूण संख्या सम किंवा विषम असेल. CRC डेटाला एका निश्चित जनरेटर पॉलिनॉमियलने भागते आणि उर्वरित जोडते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "IEEE 802 Standards", "hi": "IEEE 802 मानक", "mr": "IEEE 802 मानके" },
+          "content": {
+            "en": "IEEE 802.3 defines Ethernet (wired LAN standard). IEEE 802.11 defines wireless LAN (Wi-Fi). IEEE 802.15 covers wireless personal area networks like Bluetooth. IEEE 802.16 covers WiMAX (wireless metropolitan area networks).",
+            "hi": "IEEE 802.3 ईथरनेट को परिभाषित करता है। IEEE 802.11 वायरलेस LAN (Wi-Fi) को परिभाषित करता है। IEEE 802.15 ब्लूटूथ जैसे वायरलेस व्यक्तिगत क्षेत्र नेटवर्क को कवर करता है।",
+            "mr": "IEEE 802.3 इथरनेट परिभाषित करते. IEEE 802.11 वायरलेस LAN (Wi-Fi) परिभाषित करते. IEEE 802.15 ब्लूटूथसारख्या वायरलेस पर्सनल एरिया नेटवर्क्सला कव्हर करते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Mobile Generations: 1G to 5G", "hi": "मोबाइल पीढ़ियां: 1G से 5G", "mr": "मोबाइल जनरेशन्स: 1G ते 5G" },
+          "content": {
+            "en": "1G was analog voice-only. 2G introduced digital voice and SMS (GSM). 3G added mobile internet/data. 4G (LTE) brought high-speed broadband data for video streaming. 5G offers very high speed, extremely low latency, and supports massive numbers of connected IoT devices simultaneously.",
+            "hi": "1G केवल एनालॉग वॉयस था। 2G ने डिजिटल वॉयस और SMS पेश किया। 3G ने मोबाइल इंटरनेट जोड़ा। 4G ने हाई-स्पीड ब्रॉडबैंड डेटा लाया। 5G बहुत उच्च गति और बहुत कम विलंबता प्रदान करता है।",
+            "mr": "1G फक्त अ‍ॅनालॉग व्हॉइस होता. 2G ने डिजिटल व्हॉइस आणि SMS आणले. 3G ने मोबाइल इंटरनेट जोडले. 4G ने हाय-स्पीड ब्रॉडबँड डेटा आणला. 5G खूप जास्त वेग आणि खूप कमी विलंब देते."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "List IEEE 802.X standards for networks.", "hi": "नेटवर्क के लिए IEEE 802.X मानकों को सूचीबद्ध करें।", "mr": "नेटवर्कसाठी IEEE 802.X मानके सांगा." } },
+        { "year": 2023, "question": { "en": "Describe Bluetooth architecture with a neat diagram.", "hi": "स्वच्छ चित्र सहित ब्लूटूथ आर्किटेक्चर का वर्णन करें।", "mr": "स्वच्छ आकृतीसह ब्लूटूथ आर्किटेक्चरचे वर्णन करा." } }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": { "en": "Unit IV: Network Communication Models", "hi": "यूनिट 4: नेटवर्क संचार मॉडल", "mr": "युनिट 4: नेटवर्क कम्युनिकेशन मॉडेल्स" },
+      "notes": [
+        {
+          "topic": { "en": "OSI Reference Model (7 Layers)", "hi": "OSI संदर्भ मॉडल (7 परतें)", "mr": "OSI संदर्भ मॉडेल (7 स्तर)" },
+          "content": {
+            "en": "OSI has 7 layers: Physical (bit transmission), Data Link (framing, MAC addressing, error detection), Network (logical addressing/routing, IP), Transport (end-to-end delivery, TCP/UDP), Session (managing dialogues between applications), Presentation (data formatting/encryption), and Application (user-facing services like HTTP, FTP).",
+            "hi": "OSI में 7 परतें हैं: भौतिक, डेटा लिंक, नेटवर्क, ट्रांसपोर्ट, सत्र, प्रस्तुति, और एप्लिकेशन।",
+            "mr": "OSI मध्ये 7 स्तर आहेत: फिजिकल, डेटा लिंक, नेटवर्क, ट्रान्सपोर्ट, सेशन, प्रेझेंटेशन, आणि अ‍ॅप्लिकेशन."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "TCP/IP Model", "hi": "TCP/IP मॉडल", "mr": "TCP/IP मॉडेल" },
+          "content": {
+            "en": "TCP/IP has 4 layers (sometimes shown as 5): Network Interface, Internet (IP), Transport (TCP/UDP), and Application. It's the practical model the actual internet runs on, while OSI is mainly used as a teaching/reference framework — TCP/IP combines OSI's session, presentation and application layers into one.",
+            "hi": "TCP/IP में 4 परतें हैं: नेटवर्क इंटरफेस, इंटरनेट, ट्रांसपोर्ट, और एप्लिकेशन। यह वह व्यावहारिक मॉडल है जिस पर वास्तविक इंटरनेट चलता है।",
+            "mr": "TCP/IP मध्ये 4 स्तर आहेत: नेटवर्क इंटरफेस, इंटरनेट, ट्रान्सपोर्ट, आणि अ‍ॅप्लिकेशन. हे व्यावहारिक मॉडेल आहे ज्यावर प्रत्यक्ष इंटरनेट चालते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "IP Addressing: IPv4 Classes and IPv6", "hi": "IP एड्रेसिंग: IPv4 वर्ग और IPv6", "mr": "IP अ‍ॅड्रेसिंग: IPv4 वर्ग आणि IPv6" },
+          "content": {
+            "en": "IPv4 addresses are 32-bit, divided into classes A (large networks, starts 1-126), B (medium, 128-191), C (small, 192-223), D (multicast), E (reserved/experimental). IPv6 uses 128-bit addresses to solve IPv4 address exhaustion, written in hexadecimal groups separated by colons, and doesn't need NAT the way IPv4 commonly does.",
+            "hi": "IPv4 पते 32-बिट के होते हैं, वर्ग A, B, C, D, E में विभाजित। IPv6 IPv4 पता समाप्ति की समस्या को हल करने के लिए 128-बिट पते का उपयोग करता है।",
+            "mr": "IPv4 अ‍ॅड्रेसेस 32-बिटचे असतात, वर्ग A, B, C, D, E मध्ये विभागलेले. IPv6 IPv4 अ‍ॅड्रेस संपण्याची समस्या सोडवण्यासाठी 128-बिट अ‍ॅड्रेसेस वापरते."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "Draw and explain the layered architecture of the OSI reference model.", "hi": "OSI संदर्भ मॉडल की स्तरित संरचना बनाएं और समझाएं।", "mr": "OSI संदर्भ मॉडेलची स्तरित रचना काढा आणि स्पष्ट करा." } },
+        { "year": 2023, "question": { "en": "Compare IPv4 and IPv6.", "hi": "IPv4 और IPv6 की तुलना करें।", "mr": "IPv4 आणि IPv6 ची तुलना करा." } }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": { "en": "Unit V: Network Topologies and Network Devices", "hi": "यूनिट 5: नेटवर्क टोपोलॉजी और नेटवर्क डिवाइस", "mr": "युनिट 5: नेटवर्क टोपोलॉजी आणि नेटवर्क डिव्हाइसेस" },
+      "notes": [
+        {
+          "topic": { "en": "Network Topologies in Detail", "hi": "नेटवर्क टोपोलॉजी विस्तार से", "mr": "नेटवर्क टोपोलॉजी सविस्तर" },
+          "content": {
+            "en": "Bus topology: all nodes share a single cable — cheap but a single break disables the whole network. Star topology: all nodes connect to a central hub/switch — easy to troubleshoot, most common in modern LANs. Ring topology: nodes form a closed loop, data travels in one direction — a single node/link failure can disrupt the whole ring unless dual-ring. Mesh topology: every node connects to every other node — highest reliability and fault tolerance, but expensive in cabling.",
+            "hi": "बस टोपोलॉजी: सभी नोड्स एक ही केबल साझा करते हैं। स्टार टोपोलॉजी: सभी नोड्स एक केंद्रीय हब से जुड़ते हैं। रिंग टोपोलॉजी: नोड्स एक बंद लूप बनाते हैं। मेश टोपोलॉजी: हर नोड हर दूसरे नोड से जुड़ा होता है।",
+            "mr": "बस टोपोलॉजी: सर्व नोड्स एक केबल शेअर करतात. स्टार टोपोलॉजी: सर्व नोड्स सेंट्रल हबला जोडलेले असतात. रिंग टोपोलॉजी: नोड्स बंद लूप बनवतात. मेश टोपोलॉजी: प्रत्येक नोड इतर प्रत्येक नोडला जोडलेला असतो."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Network Devices: Hub, Switch, Router, Gateway", "hi": "नेटवर्क डिवाइस: हब, स्विच, राउटर, गेटवे", "mr": "नेटवर्क डिव्हाइसेस: हब, स्विच, राउटर, गेटवे" },
+          "content": {
+            "en": "A Hub broadcasts incoming data to all connected ports (Layer 1, no intelligence). A Switch forwards data only to the specific destination port using MAC addresses (Layer 2, smarter and more efficient than a hub). A Router forwards data between different networks using IP addresses (Layer 3). A Gateway connects networks using different protocols entirely, translating between them.",
+            "hi": "एक हब सभी जुड़े पोर्ट्स को आने वाला डेटा प्रसारित करता है। एक स्विच MAC पतों का उपयोग करके केवल विशिष्ट गंतव्य पोर्ट पर डेटा भेजता है। एक राउटर IP पतों का उपयोग करके विभिन्न नेटवर्क के बीच डेटा भेजता है।",
+            "mr": "हब सर्व जोडलेल्या पोर्ट्सना येणारा डेटा प्रसारित करते. स्विच MAC अ‍ॅड्रेसेस वापरून फक्त विशिष्ट गंतव्य पोर्टवर डेटा पाठवते. राउटर IP अ‍ॅड्रेसेस वापरून वेगवेगळ्या नेटवर्क्समध्ये डेटा पाठवते."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "Differentiate between hub, switch and router.", "hi": "हब, स्विच और राउटर के बीच अंतर बताएं।", "mr": "हब, स्विच आणि राउटरमधील फरक सांगा." } },
+        { "year": 2023, "question": { "en": "Explain mesh topology with its advantages and disadvantages.", "hi": "मेश टोपोलॉजी को उसके फायदे और नुकसान के साथ समझाएं।", "mr": "मेश टोपोलॉजी तिचे फायदे आणि तोटे यांसह स्पष्ट करा." } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "subjectId": "microprocessor-8086",
+  "subjectName": "Microprocessor (8086)",
+  "semester": 4,
+  "status": "available",
+  "chapters": [
+    {
+      "id": "u1",
+      "title": { "en": "Unit 1: 8086 Architecture", "hi": "यूनिट 1: 8086 आर्किटेक्चर", "mr": "युनिट 1: 8086 आर्किटेक्चर" },
+      "notes": [
+        {
+          "topic": { "en": "Internal Architecture of 8086", "hi": "8086 का आंतरिक आर्किटेक्चर", "mr": "8086 चे अंतर्गत आर्किटेक्चर" },
+          "content": {
+            "en": "The 8086 has two functional units working in parallel: the Bus Interface Unit (BIU) and the Execution Unit (EU). BIU fetches instructions, reads/writes data, and handles addresses — it manages a 6-byte instruction queue so the next instruction is ready before the current one finishes. EU decodes and executes instructions using the ALU and general-purpose registers. This overlap of fetch and execute is called pipelining, and it's the main reason 8086 is faster than earlier 8-bit processors.",
+            "hi": "8086 में दो कार्यात्मक इकाइयाँ समानांतर में काम करती हैं: बस इंटरफेस यूनिट (BIU) और एक्ज़ीक्यूशन यूनिट (EU)। BIU निर्देश लाता है, डेटा पढ़ता/लिखता है, और पतों को संभालता है — यह 6-बाइट इंस्ट्रक्शन क्यू बनाए रखता है ताकि अगला निर्देश पहले से तैयार रहे। EU, ALU और जनरल-पर्पज़ रजिस्टरों का उपयोग करके निर्देशों को डिकोड और निष्पादित करता है। फ़ेच और एक्ज़ीक्यूट के इस ओवरलैप को पाइपलाइनिंग कहा जाता है।",
+            "mr": "8086 मध्ये दोन फंक्शनल युनिट्स समांतर काम करतात: बस इंटरफेस युनिट (BIU) आणि एक्झिक्युशन युनिट (EU). BIU सूचना आणते, डेटा वाचते/लिहिते, आणि पत्ते हाताळते — ते 6-बाइट इंस्ट्रक्शन क्यू ठेवते जेणेकरून पुढील सूचना आधीच तयार असेल. EU, ALU आणि जनरल-पर्पज रजिस्टर्स वापरून सूचना डीकोड आणि एक्झिक्युट करते. फेच आणि एक्झिक्युट यांच्या या ओव्हरलॅपला पाइपलाइनिंग म्हणतात."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Register Organization", "hi": "रजिस्टर संगठन", "mr": "रजिस्टर संघटन" },
+          "content": {
+            "en": "8086 has 14 registers, 16-bit each: 4 general purpose (AX, BX, CX, DX — each splittable into high/low 8-bit halves), 4 segment registers (CS, DS, SS, ES) used for memory segmentation, pointer/index registers (SP, BP, SI, DI) for addressing, and the flag register that stores status flags (Carry, Zero, Sign, Overflow, etc.) set after ALU operations.",
+            "hi": "8086 में 14 रजिस्टर होते हैं, प्रत्येक 16-बिट: 4 जनरल पर्पज़ (AX, BX, CX, DX — जिन्हें हाई/लो 8-बिट भागों में बाँटा जा सकता है), 4 सेगमेंट रजिस्टर (CS, DS, SS, ES) मेमोरी सेगमेंटेशन के लिए, पॉइंटर/इंडेक्स रजिस्टर (SP, BP, SI, DI) एड्रेसिंग के लिए, और फ्लैग रजिस्टर जो ALU ऑपरेशन के बाद स्टेटस फ्लैग स्टोर करता है।",
+            "mr": "8086 मध्ये 14 रजिस्टर्स असतात, प्रत्येकी 16-बिट: 4 जनरल पर्पज (AX, BX, CX, DX — जे हाय/लो 8-बिट भागांमध्ये विभागले जाऊ शकतात), 4 सेगमेंट रजिस्टर्स (CS, DS, SS, ES) मेमरी सेगमेंटेशनसाठी, पॉइंटर/इंडेक्स रजिस्टर्स (SP, BP, SI, DI) अ‍ॅड्रेसिंगसाठी, आणि फ्लॅग रजिस्टर जे ALU ऑपरेशननंतर स्टेटस फ्लॅग्ज साठवते."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2023, "question": { "en": "Explain the internal architecture of 8086 microprocessor with a labeled diagram.", "hi": "8086 माइक्रोप्रोसेसर की आंतरिक संरचना को लेबल किए गए चित्र के साथ समझाएं।", "mr": "8086 मायक्रोप्रोसेसरची अंतर्गत रचना लेबल केलेल्या आकृतीसह स्पष्ट करा." } },
+        { "year": 2022, "question": { "en": "List and explain the function of any four registers of 8086.", "hi": "8086 के किन्हीं चार रजिस्टरों की सूची बनाएं और उनके कार्य समझाएं।", "mr": "8086 च्या कोणत्याही चार रजिस्टर्सची यादी करा आणि त्यांचे कार्य स्पष्ट करा." } }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": { "en": "Unit 2: Instruction Set", "hi": "यूनिट 2: इंस्ट्रक्शन सेट", "mr": "युनिट 2: इंस्ट्रक्शन सेट" },
+      "notes": [
+        {
+          "topic": { "en": "Data Transfer Instructions", "hi": "डेटा ट्रांसफर निर्देश", "mr": "डेटा ट्रान्सफर सूचना" },
+          "content": {
+            "en": "MOV copies data between registers, or between a register and memory — it never affects flags. Common forms: MOV AX, BX (register to register), MOV AX, [1234H] (memory to register), MOV AX, 05H (immediate value to register). XCHG swaps values between two operands. PUSH and POP move data to/from the stack, always in 16-bit words, and are used to save register values during subroutine calls.",
+            "hi": "MOV रजिस्टरों के बीच, या रजिस्टर और मेमोरी के बीच डेटा कॉपी करता है — यह कभी भी फ्लैग को प्रभावित नहीं करता। सामान्य रूप: MOV AX, BX (रजिस्टर से रजिस्टर), MOV AX, [1234H] (मेमोरी से रजिस्टर)। XCHG दो ऑपरेंड के बीच मान बदलता है। PUSH और POP डेटा को स्टैक में/से ले जाते हैं, हमेशा 16-बिट शब्दों में।",
+            "mr": "MOV रजिस्टर्समध्ये, किंवा रजिस्टर आणि मेमरीमध्ये डेटा कॉपी करते — ते फ्लॅग्जवर परिणाम करत नाही. सामान्य प्रकार: MOV AX, BX (रजिस्टर ते रजिस्टर), MOV AX, [1234H] (मेमरी ते रजिस्टर). XCHG दोन ऑपरंड्समधील मूल्ये बदलते. PUSH आणि POP डेटा स्टॅकमध्ये/मधून हलवतात, नेहमी 16-बिट शब्दांमध्ये."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2023, "question": { "en": "Explain any four data transfer instructions of 8086 with examples.", "hi": "उदाहरण सहित 8086 के किन्हीं चार डेटा ट्रांसफर निर्देशों को समझाएं।", "mr": "उदाहरणांसह 8086 च्या कोणत्याही चार डेटा ट्रान्सफर सूचना स्पष्ट करा." } }
+      ]
+    }
+  ]
+}

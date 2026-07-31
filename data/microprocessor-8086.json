@@ -1,53 +1,210 @@
 {
   "subjectId": "microprocessor-8086",
-  "subjectName": "Microprocessor (8086)",
+  "subjectName": "Microprocessor Programming (314321)",
   "semester": 4,
   "status": "available",
   "chapters": [
     {
       "id": "u1",
-      "title": { "en": "Unit 1: 8086 Architecture", "hi": "यूनिट 1: 8086 आर्किटेक्चर", "mr": "युनिट 1: 8086 आर्किटेक्चर" },
+      "title": { "en": "Unit I: 8086 - 16 Bit Microprocessor", "hi": "यूनिट 1: 8086 - 16 बिट माइक्रोप्रोसेसर", "mr": "युनिट 1: 8086 - 16 बिट मायक्रोप्रोसेसर" },
       "notes": [
         {
-          "topic": { "en": "Internal Architecture of 8086", "hi": "8086 का आंतरिक आर्किटेक्चर", "mr": "8086 चे अंतर्गत आर्किटेक्चर" },
+          "topic": { "en": "8086 Salient Features and Pin Description", "hi": "8086 की मुख्य विशेषताएं और पिन विवरण", "mr": "8086 ची ठळक वैशिष्ट्ये आणि पिन वर्णन" },
           "content": {
-            "en": "The 8086 has two functional units working in parallel: the Bus Interface Unit (BIU) and the Execution Unit (EU). BIU fetches instructions, reads/writes data, and handles addresses — it manages a 6-byte instruction queue so the next instruction is ready before the current one finishes. EU decodes and executes instructions using the ALU and general-purpose registers. This overlap of fetch and execute is called pipelining, and it's the main reason 8086 is faster than earlier 8-bit processors.",
-            "hi": "8086 में दो कार्यात्मक इकाइयाँ समानांतर में काम करती हैं: बस इंटरफेस यूनिट (BIU) और एक्ज़ीक्यूशन यूनिट (EU)। BIU निर्देश लाता है, डेटा पढ़ता/लिखता है, और पतों को संभालता है — यह 6-बाइट इंस्ट्रक्शन क्यू बनाए रखता है ताकि अगला निर्देश पहले से तैयार रहे। EU, ALU और जनरल-पर्पज़ रजिस्टरों का उपयोग करके निर्देशों को डिकोड और निष्पादित करता है। फ़ेच और एक्ज़ीक्यूट के इस ओवरलैप को पाइपलाइनिंग कहा जाता है।",
-            "mr": "8086 मध्ये दोन फंक्शनल युनिट्स समांतर काम करतात: बस इंटरफेस युनिट (BIU) आणि एक्झिक्युशन युनिट (EU). BIU सूचना आणते, डेटा वाचते/लिहिते, आणि पत्ते हाताळते — ते 6-बाइट इंस्ट्रक्शन क्यू ठेवते जेणेकरून पुढील सूचना आधीच तयार असेल. EU, ALU आणि जनरल-पर्पज रजिस्टर्स वापरून सूचना डीकोड आणि एक्झिक्युट करते. फेच आणि एक्झिक्युट यांच्या या ओव्हरलॅपला पाइपलाइनिंग म्हणतात."
+            "en": "The 8086 is a 16-bit microprocessor with a 20-bit address bus (1 MB addressable memory), operating at clock speeds of 5-10 MHz. Its 40 pins are grouped into address/data lines (multiplexed AD0-AD15), control signals (RD, WR, ALE), power/ground, and clock input. Multiplexing address and data on the same pins reduces package size but requires an external latch to demultiplex them.",
+            "hi": "8086 एक 16-बिट माइक्रोप्रोसेसर है जिसमें 20-बिट एड्रेस बस (1 MB एड्रेस करने योग्य मेमोरी) है, जो 5-10 MHz की क्लॉक स्पीड पर काम करता है। इसके 40 पिन एड्रेस/डेटा लाइनों, नियंत्रण संकेतों और पावर/ग्राउंड में विभाजित हैं।",
+            "mr": "8086 हा 16-बिट मायक्रोप्रोसेसर आहे ज्यामध्ये 20-बिट अ‍ॅड्रेस बस (1 MB अ‍ॅड्रेसेबल मेमरी) आहे, जो 5-10 MHz क्लॉक स्पीडवर कार्य करतो. त्याचे 40 पिन अ‍ॅड्रेस/डेटा लाइन्स, कंट्रोल सिग्नल्स आणि पॉवर/ग्राउंडमध्ये विभागलेले आहेत."
           },
           "reviewed": false
         },
         {
-          "topic": { "en": "Register Organization", "hi": "रजिस्टर संगठन", "mr": "रजिस्टर संघटन" },
+          "topic": { "en": "Architecture: BIU, EU and Register Organization", "hi": "आर्किटेक्चर: BIU, EU और रजिस्टर संगठन", "mr": "आर्किटेक्चर: BIU, EU आणि रजिस्टर संघटन" },
           "content": {
-            "en": "8086 has 14 registers, 16-bit each: 4 general purpose (AX, BX, CX, DX — each splittable into high/low 8-bit halves), 4 segment registers (CS, DS, SS, ES) used for memory segmentation, pointer/index registers (SP, BP, SI, DI) for addressing, and the flag register that stores status flags (Carry, Zero, Sign, Overflow, etc.) set after ALU operations.",
-            "hi": "8086 में 14 रजिस्टर होते हैं, प्रत्येक 16-बिट: 4 जनरल पर्पज़ (AX, BX, CX, DX — जिन्हें हाई/लो 8-बिट भागों में बाँटा जा सकता है), 4 सेगमेंट रजिस्टर (CS, DS, SS, ES) मेमोरी सेगमेंटेशन के लिए, पॉइंटर/इंडेक्स रजिस्टर (SP, BP, SI, DI) एड्रेसिंग के लिए, और फ्लैग रजिस्टर जो ALU ऑपरेशन के बाद स्टेटस फ्लैग स्टोर करता है।",
-            "mr": "8086 मध्ये 14 रजिस्टर्स असतात, प्रत्येकी 16-बिट: 4 जनरल पर्पज (AX, BX, CX, DX — जे हाय/लो 8-बिट भागांमध्ये विभागले जाऊ शकतात), 4 सेगमेंट रजिस्टर्स (CS, DS, SS, ES) मेमरी सेगमेंटेशनसाठी, पॉइंटर/इंडेक्स रजिस्टर्स (SP, BP, SI, DI) अ‍ॅड्रेसिंगसाठी, आणि फ्लॅग रजिस्टर जे ALU ऑपरेशननंतर स्टेटस फ्लॅग्ज साठवते."
+            "en": "The 8086 has two units working in parallel: the Bus Interface Unit (BIU) fetches instructions into a 6-byte instruction queue and handles all bus operations, while the Execution Unit (EU) decodes and executes instructions using the ALU and registers. There are 14 registers total: 4 general-purpose (AX, BX, CX, DX, each splittable into 8-bit high/low halves), 4 segment registers (CS, DS, SS, ES), pointer/index registers (SP, BP, SI, DI), and the flag register.",
+            "hi": "8086 में दो इकाइयाँ समानांतर काम करती हैं: बस इंटरफेस यूनिट (BIU) 6-बाइट इंस्ट्रक्शन क्यू में निर्देश लाता है और सभी बस संचालन संभालता है, जबकि एक्ज़ीक्यूशन यूनिट (EU) ALU और रजिस्टरों का उपयोग करके निर्देशों को डिकोड और निष्पादित करता है। कुल 14 रजिस्टर होते हैं।",
+            "mr": "8086 मध्ये दोन युनिट्स समांतर काम करतात: बस इंटरफेस युनिट (BIU) 6-बाइट इंस्ट्रक्शन क्यूमध्ये सूचना आणते आणि सर्व बस ऑपरेशन्स हाताळते, तर एक्झिक्युशन युनिट (EU) ALU आणि रजिस्टर्स वापरून सूचना डीकोड आणि एक्झिक्युट करते. एकूण 14 रजिस्टर्स असतात."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Pipelining", "hi": "पाइपलाइनिंग", "mr": "पाइपलाइनिंग" },
+          "content": {
+            "en": "Pipelining means the BIU fetches the next instruction while the EU is still executing the current one, using the instruction queue as a buffer. This overlap of fetch and execute cycles is why the 8086 is faster than earlier microprocessors that fetch and execute strictly one after another.",
+            "hi": "पाइपलाइनिंग का अर्थ है कि जब EU वर्तमान निर्देश को निष्पादित कर रहा होता है, तब BIU अगला निर्देश लाता है, इंस्ट्रक्शन क्यू को बफर के रूप में उपयोग करते हुए। फ़ेच और एक्ज़ीक्यूट चक्रों का यह ओवरलैप ही कारण है कि 8086 पहले के माइक्रोप्रोसेसरों से तेज़ है।",
+            "mr": "पाइपलाइनिंग म्हणजे EU सध्याची सूचना एक्झिक्युट करत असताना BIU पुढील सूचना आणते, इंस्ट्रक्शन क्यू बफर म्हणून वापरून. फेच आणि एक्झिक्युट सायकल्सचा हा ओव्हरलॅप हेच कारण आहे की 8086 आधीच्या मायक्रोप्रोसेसर्सपेक्षा वेगवान आहे."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Memory Segmentation and Physical Address Generation", "hi": "मेमोरी सेगमेंटेशन और भौतिक पता निर्माण", "mr": "मेमरी सेगमेंटेशन आणि फिजिकल अ‍ॅड्रेस जनरेशन" },
+          "content": {
+            "en": "Since 8086 registers are only 16-bit but the address bus is 20-bit, memory is divided into 64KB segments. The physical address is calculated as (Segment Register value x 10H) + Offset. For example, if CS = 2000H and IP = 0500H, the physical address = 20000H + 0500H = 20500H. This lets a 16-bit register system address a full 1MB of memory.",
+            "hi": "चूंकि 8086 रजिस्टर केवल 16-बिट के होते हैं लेकिन एड्रेस बस 20-बिट की होती है, मेमोरी को 64KB सेगमेंट में विभाजित किया जाता है। भौतिक पता (सेगमेंट रजिस्टर मान x 10H) + ऑफ़सेट के रूप में गणना की जाती है।",
+            "mr": "8086 रजिस्टर्स फक्त 16-बिटचे असले तरी अ‍ॅड्रेस बस 20-बिटची असल्याने, मेमरी 64KB सेगमेंट्समध्ये विभागली जाते. फिजिकल अ‍ॅड्रेस (सेगमेंट रजिस्टर व्हॅल्यू x 10H) + ऑफसेट असे मोजले जाते."
           },
           "reviewed": false
         }
       ],
       "pyqs": [
-        { "year": 2023, "question": { "en": "Explain the internal architecture of 8086 microprocessor with a labeled diagram.", "hi": "8086 माइक्रोप्रोसेसर की आंतरिक संरचना को लेबल किए गए चित्र के साथ समझाएं।", "mr": "8086 मायक्रोप्रोसेसरची अंतर्गत रचना लेबल केलेल्या आकृतीसह स्पष्ट करा." } },
-        { "year": 2022, "question": { "en": "List and explain the function of any four registers of 8086.", "hi": "8086 के किन्हीं चार रजिस्टरों की सूची बनाएं और उनके कार्य समझाएं।", "mr": "8086 च्या कोणत्याही चार रजिस्टर्सची यादी करा आणि त्यांचे कार्य स्पष्ट करा." } }
+        { "year": 2024, "question": { "en": "Draw and explain the architecture of 8086 microprocessor.", "hi": "8086 माइक्रोप्रोसेसर की संरचना बनाएं और समझाएं।", "mr": "8086 मायक्रोप्रोसेसरची रचना काढा आणि स्पष्ट करा." } },
+        { "year": 2023, "question": { "en": "Calculate the physical address if CS = 3000H and IP = 0200H.", "hi": "यदि CS = 3000H और IP = 0200H है तो भौतिक पता निकालें।", "mr": "जर CS = 3000H आणि IP = 0200H असेल तर फिजिकल अ‍ॅड्रेस काढा." } }
       ]
     },
     {
       "id": "u2",
-      "title": { "en": "Unit 2: Instruction Set", "hi": "यूनिट 2: इंस्ट्रक्शन सेट", "mr": "युनिट 2: इंस्ट्रक्शन सेट" },
+      "title": { "en": "Unit II: The Art of Assembly Language Programming", "hi": "यूनिट 2: असेंबली भाषा प्रोग्रामिंग की कला", "mr": "युनिट 2: असेंब्ली भाषा प्रोग्रामिंगची कला" },
       "notes": [
         {
-          "topic": { "en": "Data Transfer Instructions", "hi": "डेटा ट्रांसफर निर्देश", "mr": "डेटा ट्रान्सफर सूचना" },
+          "topic": { "en": "Program Development Steps", "hi": "प्रोग्राम विकास के चरण", "mr": "प्रोग्राम डेव्हलपमेंटचे टप्पे" },
           "content": {
-            "en": "MOV copies data between registers, or between a register and memory — it never affects flags. Common forms: MOV AX, BX (register to register), MOV AX, [1234H] (memory to register), MOV AX, 05H (immediate value to register). XCHG swaps values between two operands. PUSH and POP move data to/from the stack, always in 16-bit words, and are used to save register values during subroutine calls.",
-            "hi": "MOV रजिस्टरों के बीच, या रजिस्टर और मेमोरी के बीच डेटा कॉपी करता है — यह कभी भी फ्लैग को प्रभावित नहीं करता। सामान्य रूप: MOV AX, BX (रजिस्टर से रजिस्टर), MOV AX, [1234H] (मेमोरी से रजिस्टर)। XCHG दो ऑपरेंड के बीच मान बदलता है। PUSH और POP डेटा को स्टैक में/से ले जाते हैं, हमेशा 16-बिट शब्दों में।",
-            "mr": "MOV रजिस्टर्समध्ये, किंवा रजिस्टर आणि मेमरीमध्ये डेटा कॉपी करते — ते फ्लॅग्जवर परिणाम करत नाही. सामान्य प्रकार: MOV AX, BX (रजिस्टर ते रजिस्टर), MOV AX, [1234H] (मेमरी ते रजिस्टर). XCHG दोन ऑपरंड्समधील मूल्ये बदलते. PUSH आणि POP डेटा स्टॅकमध्ये/मधून हलवतात, नेहमी 16-बिट शब्दांमध्ये."
+            "en": "Writing an assembly program follows: problem definition, designing an algorithm, drawing a flowchart, preparing an initialization checklist (registers, segments), choosing appropriate instructions, then converting the algorithm into actual assembly code line by line.",
+            "hi": "असेंबली प्रोग्राम लिखने के चरण: समस्या परिभाषा, एल्गोरिदम डिज़ाइन, फ्लोचार्ट बनाना, इनिशियलाइज़ेशन चेकलिस्ट तैयार करना, उपयुक्त निर्देश चुनना, फिर एल्गोरिदम को वास्तविक असेंबली कोड में बदलना।",
+            "mr": "असेंब्ली प्रोग्राम लिहिण्याचे टप्पे: समस्या व्याख्या, अल्गोरिदम डिझाइन, फ्लोचार्ट काढणे, इनिशियलायझेशन चेकलिस्ट तयार करणे, योग्य सूचना निवडणे, नंतर अल्गोरिदमला प्रत्यक्ष असेंब्ली कोडमध्ये रूपांतरित करणे."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Assembly Language Tools: Editor, Assembler, Linker, Debugger", "hi": "असेंबली भाषा उपकरण: एडिटर, असेंबलर, लिंकर, डिबगर", "mr": "असेंब्ली भाषा साधने: एडिटर, असेंब्लर, लिंकर, डीबगर" },
+          "content": {
+            "en": "The Editor is used to write source code (.ASM file). The Assembler (e.g. MASM/TASM) translates assembly source into object code (.OBJ). The Linker combines object files and library routines into a single executable (.EXE). The Debugger lets you step through the running program to check register/memory values and find errors.",
+            "hi": "एडिटर का उपयोग सोर्स कोड लिखने के लिए किया जाता है। असेंबलर असेंबली सोर्स को ऑब्जेक्ट कोड में अनुवाद करता है। लिंकर ऑब्जेक्ट फाइलों को एक ही निष्पादन योग्य फ़ाइल में जोड़ता है। डिबगर त्रुटियों को खोजने के लिए प्रोग्राम को चरण दर चरण चलाने देता है।",
+            "mr": "एडिटरचा वापर सोर्स कोड लिहिण्यासाठी केला जातो. असेंब्लर असेंब्ली सोर्सचे ऑब्जेक्ट कोडमध्ये भाषांतर करते. लिंकर ऑब्जेक्ट फाइल्सना एकाच एक्झिक्युटेबल फाइलमध्ये जोडते. डीबगर त्रुटी शोधण्यासाठी प्रोग्राम टप्प्याटप्प्याने चालवू देतो."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Assembler Directives", "hi": "असेंबलर निर्देश", "mr": "असेंब्लर डायरेक्टिव्ह्ज" },
+          "content": {
+            "en": "Assembler directives instruct the assembler itself (not the CPU) how to process the program. Common ones: DB/DW (define byte/word for data), SEGMENT/ENDS (mark segment boundaries), ASSUME (tell assembler which segment register points where), END (marks end of source file), EQU (define a constant).",
+            "hi": "असेंबलर निर्देश असेंबलर को (CPU को नहीं) बताते हैं कि प्रोग्राम को कैसे संसाधित करना है। सामान्य: DB/DW, SEGMENT/ENDS, ASSUME, END, EQU।",
+            "mr": "असेंब्लर डायरेक्टिव्ह्ज असेंब्लरला (CPU ला नाही) सांगतात की प्रोग्राम कसा प्रोसेस करायचा. सामान्य: DB/DW, SEGMENT/ENDS, ASSUME, END, EQU."
           },
           "reviewed": false
         }
       ],
       "pyqs": [
-        { "year": 2023, "question": { "en": "Explain any four data transfer instructions of 8086 with examples.", "hi": "उदाहरण सहित 8086 के किन्हीं चार डेटा ट्रांसफर निर्देशों को समझाएं।", "mr": "उदाहरणांसह 8086 च्या कोणत्याही चार डेटा ट्रान्सफर सूचना स्पष्ट करा." } }
+        { "year": 2024, "question": { "en": "List the steps of program development for an assembly language program.", "hi": "असेंबली भाषा प्रोग्राम के विकास के चरणों की सूची बनाएं।", "mr": "असेंब्ली भाषा प्रोग्रामच्या डेव्हलपमेंटचे टप्पे सांगा." } },
+        { "year": 2023, "question": { "en": "Explain any four assembler directives with examples.", "hi": "उदाहरण सहित किन्हीं चार असेंबलर निर्देशों को समझाएं।", "mr": "उदाहरणांसह कोणतेही चार असेंब्लर डायरेक्टिव्ह्ज स्पष्ट करा." } }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": { "en": "Unit III: Instruction Set of 8086 Microprocessor", "hi": "यूनिट 3: 8086 माइक्रोप्रोसेसर का इंस्ट्रक्शन सेट", "mr": "युनिट 3: 8086 मायक्रोप्रोसेसरचा इंस्ट्रक्शन सेट" },
+      "notes": [
+        {
+          "topic": { "en": "Machine Language Instruction Format and Addressing Modes", "hi": "मशीन भाषा निर्देश प्रारूप और एड्रेसिंग मोड", "mr": "मशीन भाषा इंस्ट्रक्शन फॉरमॅट आणि अ‍ॅड्रेसिंग मोड्स" },
+          "content": {
+            "en": "An 8086 machine instruction contains an opcode and, depending on the addressing mode, one or more operands. Addressing modes include: immediate (value given directly), register (data in a register), direct (memory address given directly), register indirect (address held in BX/SI/DI), and based/indexed modes for array/structure access.",
+            "hi": "एक 8086 मशीन निर्देश में एक ऑपकोड और, एड्रेसिंग मोड के आधार पर, एक या अधिक ऑपरेंड होते हैं। एड्रेसिंग मोड में शामिल हैं: तत्काल, रजिस्टर, प्रत्यक्ष, रजिस्टर अप्रत्यक्ष, और आधारित/अनुक्रमित मोड।",
+            "mr": "8086 मशीन इंस्ट्रक्शनमध्ये एक ऑपकोड आणि, अ‍ॅड्रेसिंग मोडनुसार, एक किंवा अधिक ऑपरंड्स असतात. अ‍ॅड्रेसिंग मोड्समध्ये समाविष्ट आहेत: इमिजिएट, रजिस्टर, डायरेक्ट, रजिस्टर इनडायरेक्ट, आणि बेस्ड/इंडेक्स्ड मोड्स."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Data Transfer Instructions", "hi": "डेटा ट्रांसफर निर्देश", "mr": "डेटा ट्रान्सफर सूचना" },
+          "content": {
+            "en": "MOV copies data between registers or between register and memory (never affects flags). Examples: MOV AX, BX; MOV AX, [1234H]; MOV AX, 05H. XCHG swaps two operand values. PUSH/POP move 16-bit data to/from the stack, commonly used to preserve register values during procedure calls.",
+            "hi": "MOV रजिस्टरों के बीच या रजिस्टर और मेमोरी के बीच डेटा कॉपी करता है। XCHG दो ऑपरेंड मानों को बदलता है। PUSH/POP स्टैक में/से 16-बिट डेटा ले जाते हैं।",
+            "mr": "MOV रजिस्टर्समध्ये किंवा रजिस्टर आणि मेमरीमध्ये डेटा कॉपी करते. XCHG दोन ऑपरंड व्हॅल्यूज बदलते. PUSH/POP स्टॅकमध्ये/मधून 16-बिट डेटा हलवतात."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Arithmetic and Logical Instructions", "hi": "अंकगणितीय और तार्किक निर्देश", "mr": "अंकगणितीय आणि लॉजिकल सूचना" },
+          "content": {
+            "en": "ADD/SUB perform addition/subtraction and affect flags (Carry, Zero, Sign, Overflow). MUL/IMUL handle unsigned/signed multiplication; DIV/IDIV handle division. Logical instructions AND, OR, XOR, NOT operate bitwise and are commonly used for masking bits or clearing registers (e.g. XOR AX, AX to zero a register quickly).",
+            "hi": "ADD/SUB जोड़ और घटाव करते हैं और फ्लैग को प्रभावित करते हैं। MUL/IMUL गुणन संभालते हैं; DIV/IDIV भाग संभालते हैं। AND, OR, XOR, NOT बिटवाइज़ काम करते हैं।",
+            "mr": "ADD/SUB बेरीज आणि वजाबाकी करतात आणि फ्लॅग्जवर परिणाम करतात. MUL/IMUL गुणाकार हाताळतात; DIV/IDIV भागाकार हाताळतात. AND, OR, XOR, NOT बिटवाइज काम करतात."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "String and Program Control Instructions", "hi": "स्ट्रिंग और प्रोग्राम नियंत्रण निर्देश", "mr": "स्ट्रिंग आणि प्रोग्राम कंट्रोल सूचना" },
+          "content": {
+            "en": "String instructions (MOVS, CMPS, SCAS, LODS, STOS) operate on blocks of data using SI/DI as pointers, often combined with the REP prefix to repeat automatically. Program control instructions (JMP, CALL, RET, conditional jumps like JZ/JNZ/JC) alter the normal sequential flow of execution based on flag conditions.",
+            "hi": "स्ट्रिंग निर्देश SI/DI का उपयोग पॉइंटर के रूप में करके डेटा ब्लॉक पर काम करते हैं, अक्सर REP प्रीफ़िक्स के साथ। प्रोग्राम नियंत्रण निर्देश (JMP, CALL, RET, सशर्त जंप) निष्पादन के सामान्य क्रम को बदलते हैं।",
+            "mr": "स्ट्रिंग सूचना SI/DI ला पॉइंटर म्हणून वापरून डेटा ब्लॉकवर काम करतात, अनेकदा REP प्रीफिक्ससह. प्रोग्राम कंट्रोल सूचना (JMP, CALL, RET, कंडिशनल जंप्स) एक्झिक्युशनचा सामान्य क्रम बदलतात."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "Explain any four data transfer instructions of 8086 with examples.", "hi": "उदाहरण सहित 8086 के किन्हीं चार डेटा ट्रांसफर निर्देशों को समझाएं।", "mr": "उदाहरणांसह 8086 च्या कोणत्याही चार डेटा ट्रान्सफर सूचना स्पष्ट करा." } },
+        { "year": 2023, "question": { "en": "Differentiate between procedure and macro.", "hi": "प्रोसीजर और मैक्रो के बीच अंतर बताएं।", "mr": "प्रोसीजर आणि मॅक्रोमधील फरक सांगा." } }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": { "en": "Unit IV: Assembly Language Programming", "hi": "यूनिट 4: असेंबली भाषा प्रोग्रामिंग", "mr": "युनिट 4: असेंब्ली भाषा प्रोग्रामिंग" },
+      "notes": [
+        {
+          "topic": { "en": "Models of 8086 Assembly Language Program", "hi": "8086 असेंबली भाषा प्रोग्राम के मॉडल", "mr": "8086 असेंब्ली भाषा प्रोग्रामचे मॉडेल्स" },
+          "content": {
+            "en": "A standard 8086 ALP structure has a data segment (DB/DW declarations), a code segment (the actual instructions between ASSUME and the main procedure), and ends with an INT 21H DOS call sequence to terminate the program properly.",
+            "hi": "एक मानक 8086 ALP संरचना में एक डेटा सेगमेंट, एक कोड सेगमेंट होता है, और प्रोग्राम को ठीक से समाप्त करने के लिए INT 21H DOS कॉल अनुक्रम के साथ समाप्त होता है।",
+            "mr": "एक स्टँडर्ड 8086 ALP रचनेत डेटा सेगमेंट, कोड सेगमेंट असते, आणि प्रोग्राम व्यवस्थित संपवण्यासाठी INT 21H DOS कॉल सिक्वेन्ससह संपते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Programming Patterns: Arrays, Sorting, Sum of Series", "hi": "प्रोग्रामिंग पैटर्न: सरणी, छँटाई, श्रृंखला का योग", "mr": "प्रोग्रामिंग पॅटर्न्स: अ‍ॅरे, सॉर्टिंग, सिरीजची बेरीज" },
+          "content": {
+            "en": "Common exam programs include: finding sum of a series using a loop with LOOP instruction, finding smallest/largest in an array via comparison inside a loop, and sorting using bubble-sort logic with CMP and conditional jumps (JG/JL) to swap out-of-order elements.",
+            "hi": "सामान्य परीक्षा कार्यक्रमों में शामिल हैं: LOOP निर्देश के साथ श्रृंखला का योग ज्ञात करना, तुलना के माध्यम से सरणी में सबसे छोटा/सबसे बड़ा ज्ञात करना, और CMP व सशर्त जंप के साथ बबल-सॉर्ट तर्क का उपयोग करके छँटाई करना।",
+            "mr": "सामान्य परीक्षा प्रोग्राम्समध्ये समाविष्ट आहे: LOOP सूचनेसह सिरीजची बेरीज काढणे, तुलनेद्वारे अ‍ॅरेमधील सर्वात लहान/मोठे शोधणे, आणि CMP व कंडिशनल जंप्ससह बबल-सॉर्ट लॉजिक वापरून सॉर्ट करणे."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "String Operations: Length, Reverse, Compare, Concatenate, Copy", "hi": "स्ट्रिंग संचालन: लंबाई, उल्टा, तुलना, संयोजन, कॉपी", "mr": "स्ट्रिंग ऑपरेशन्स: लांबी, रिव्हर्स, तुलना, कॉन्कॅटनेट, कॉपी" },
+          "content": {
+            "en": "String-length programs count characters until a terminator ($ or null). String reversal swaps characters from both ends inward. Comparison checks characters position-by-position using CMPSB or manual CMP in a loop. Concatenation appends one string's characters after another's using DI as the destination pointer.",
+            "hi": "स्ट्रिंग-लंबाई प्रोग्राम एक टर्मिनेटर तक वर्णों की गिनती करते हैं। स्ट्रिंग रिवर्सल दोनों सिरों से वर्णों को अंदर की ओर बदलता है। तुलना CMPSB या मैनुअल CMP का उपयोग करके स्थिति-दर-स्थिति वर्णों की जांच करती है।",
+            "mr": "स्ट्रिंग-लांबी प्रोग्राम्स टर्मिनेटरपर्यंत कॅरेक्टर्स मोजतात. स्ट्रिंग रिव्हर्सल दोन्ही टोकांपासून कॅरेक्टर्स आतल्या दिशेने बदलते. तुलना CMPSB किंवा मॅन्युअल CMP वापरून पोझिशन-बाय-पोझिशन कॅरेक्टर्स तपासते."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "Write an ALP to find the largest number from an array of n numbers.", "hi": "n संख्याओं की सरणी में से सबसे बड़ी संख्या ज्ञात करने के लिए ALP लिखें।", "mr": "n संख्यांच्या अ‍ॅरेमधून सर्वात मोठी संख्या शोधण्यासाठी ALP लिहा." } },
+        { "year": 2023, "question": { "en": "Write an ALP to check whether a given number is odd or even.", "hi": "दी गई संख्या विषम है या सम, यह जांचने के लिए ALP लिखें।", "mr": "दिलेली संख्या विषम आहे की सम हे तपासण्यासाठी ALP लिहा." } }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": { "en": "Unit V: Procedure and Macro", "hi": "यूनिट 5: प्रोसीजर और मैक्रो", "mr": "युनिट 5: प्रोसीजर आणि मॅक्रो" },
+      "notes": [
+        {
+          "topic": { "en": "Defining and Calling Procedures", "hi": "प्रोसीजर को परिभाषित और कॉल करना", "mr": "प्रोसीजर डिफाइन आणि कॉल करणे" },
+          "content": {
+            "en": "A procedure is defined using PROC...ENDP, marked FAR or NEAR depending on whether it's called from a different segment or the same one. CALL transfers control to the procedure and pushes the return address onto the stack; RET pops that address and returns control back.",
+            "hi": "एक प्रोसीजर को PROC...ENDP का उपयोग करके परिभाषित किया जाता है। CALL नियंत्रण को प्रोसीजर में स्थानांतरित करता है और रिटर्न पते को स्टैक पर पुश करता है; RET उस पते को पॉप करता है और नियंत्रण वापस लौटाता है।",
+            "mr": "प्रोसीजर PROC...ENDP वापरून डिफाइन केले जाते. CALL कंट्रोल प्रोसीजरकडे ट्रान्सफर करते आणि रिटर्न अ‍ॅड्रेस स्टॅकवर पुश करते; RET तो अ‍ॅड्रेस पॉप करते आणि कंट्रोल परत करते."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Parameter Passing Methods", "hi": "पैरामीटर पासिंग विधियाँ", "mr": "पॅरामीटर पासिंग पद्धती" },
+          "content": {
+            "en": "Parameters can be passed to a procedure via registers (simplest, limited by register count), memory locations (shared variables), or the stack (push values before CALL, procedure reads them using BP-relative addressing) — the stack method is most flexible for passing multiple/variable parameters.",
+            "hi": "पैरामीटर को रजिस्टरों, मेमोरी स्थानों, या स्टैक के माध्यम से प्रोसीजर में पास किया जा सकता है — स्टैक विधि कई/परिवर्तनीय पैरामीटर पास करने के लिए सबसे लचीली है।",
+            "mr": "पॅरामीटर्स रजिस्टर्स, मेमरी लोकेशन्स, किंवा स्टॅकद्वारे प्रोसीजरला पास केले जाऊ शकतात — स्टॅक पद्धत अनेक/व्हेरिएबल पॅरामीटर्स पास करण्यासाठी सर्वात लवचिक आहे."
+          },
+          "reviewed": false
+        },
+        {
+          "topic": { "en": "Macros vs Procedures", "hi": "मैक्रो बनाम प्रोसीजर", "mr": "मॅक्रो विरुद्ध प्रोसीजर" },
+          "content": {
+            "en": "A macro (defined with MACRO...ENDM) is expanded inline by the assembler at every call site — faster execution (no CALL/RET overhead) but larger code size if used often. A procedure is stored once and called repeatedly — smaller code size but slightly slower due to CALL/RET overhead. Macros support parameters similar to procedures.",
+            "hi": "एक मैक्रो को असेंबलर द्वारा हर कॉल साइट पर इनलाइन विस्तारित किया जाता है — तेज़ निष्पादन लेकिन बार-बार उपयोग करने पर बड़ा कोड आकार। एक प्रोसीजर एक बार संग्रहीत होता है और बार-बार कॉल किया जाता है — छोटा कोड आकार लेकिन थोड़ा धीमा।",
+            "mr": "मॅक्रो असेंब्लरद्वारे प्रत्येक कॉल साइटवर इनलाइन विस्तारित केला जातो — जलद एक्झिक्युशन पण वारंवार वापरल्यास मोठा कोड आकार. प्रोसीजर एकदा साठवला जातो आणि वारंवार कॉल केला जातो — लहान कोड आकार पण थोडा हळू."
+          },
+          "reviewed": false
+        }
+      ],
+      "pyqs": [
+        { "year": 2024, "question": { "en": "Differentiate between procedure and macro (any four points).", "hi": "प्रोसीजर और मैक्रो के बीच अंतर बताएं (कोई चार बिंदु)।", "mr": "प्रोसीजर आणि मॅक्रोमधील फरक सांगा (कोणतेही चार मुद्दे)." } },
+        { "year": 2023, "question": { "en": "Explain parameter passing methods used with procedures.", "hi": "प्रोसीजर के साथ उपयोग की जाने वाली पैरामीटर पासिंग विधियों को समझाएं।", "mr": "प्रोसीजरसोबत वापरल्या जाणाऱ्या पॅरामीटर पासिंग पद्धती स्पष्ट करा." } }
       ]
     }
   ]

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Generator (Admin Only — Not for Students)</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  main { max-width: 720px; }
+  textarea, input[type=text] {
+    width: 100%; background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px; color: var(--text); font-family: var(--font-body);
+    margin-bottom: 14px;
+  }
+  textarea { min-height: 90px; }
+  label { font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 6px; }
+  pre {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; overflow-x: auto; font-size: 0.8rem; white-space: pre-wrap;
+  }
+  .warn {
+    background: var(--surface); border: 1px solid var(--amber); border-radius: 8px;
+    padding: 14px; margin-bottom: 20px; font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">ADMIN</span><span class="brand-name">Content Generator</span></div>
+</header>
+<main>
+  <div class="warn">
+    This page is for you (the content creator), not students. It is not linked from the
+    student app's navigation. Every output here is a <strong>draft</strong> — read it before
+    pasting it into <code>data/[subject-id].json</code>. Gemini can get technical details or
+    Hindi/Marathi terminology wrong, especially for niche instruction-set vocabulary.
+  </div>
+
+  <label for="apiKeyInput">Gemini API key</label>
+  <input type="text" id="apiKeyInput" placeholder="Paste your Gemini API key">
+
+  <label for="subjectName">Subject name</label>
+  <input type="text" id="subjectName" placeholder="e.g. Database Management System">
+
+  <label for="chapterList">Chapters (one per line)</label>
+  <textarea id="chapterList" placeholder="Unit 1: ER Model&#10;Unit 2: Normalization&#10;Unit 3: SQL Queries"></textarea>
+
+  <label for="targetLang">Target language for this draft</label>
+  <select id="targetLang" class="control">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="mr">Marathi</option>
+  </select>
+
+  <button id="genBtn" class="btn-solid">Generate draft JSON</button>
+
+  <h3 style="margin-top:28px;">Output (copy, review, then paste into your data file)</h3>
+  <pre id="output">Nothing generated yet.</pre>
+</main>
+<script>
+document.getElementById('genBtn').addEventListener('click', async () => {
+  const apiKey = document.getElementById('apiKeyInput').value.trim();
+  const subject = document.getElementById('subjectName').value.trim();
+  const chapters = document.getElementById('chapterList').value.trim().split('\n').filter(Boolean);
+  const lang = document.getElementById('targetLang').value;
+  const output = document.getElementById('output');
+
+  if (!apiKey || !subject || !chapters.length) {
+    alert('Fill in API key, subject name, and at least one chapter.');
+    return;
+  }
+
+  output.textContent = 'Generating...';
+
+  const langNames = { en: 'English', hi: 'Hindi', mr: 'Marathi' };
+  const prompt = `Generate MSBTE diploma-level study notes and 2 likely exam questions per chapter for the subject "${subject}", for these chapters: ${chapters.join(', ')}. Write in ${langNames[lang]}. Keep each note concise (3-5 sentences), technically accurate, and aligned with a diploma (not degree) level of depth. Output ONLY valid JSON in this exact structure, no markdown fences, no extra text:
+{
+  "chapters": [
+    { "title": "...", "notes": [ { "topic": "...", "content": "..." } ], "pyqs": [ { "year": 2023, "question": "..." } ] }
+  ]
+}`;
+
+  try {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+    });
+    const data = await res.json();
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.';
+    output.textContent = text;
+  } catch (e) {
+    output.textContent = 'Error calling Gemini API: ' + e.message;
+  }
+});
+</script>
+</body>
+</html>

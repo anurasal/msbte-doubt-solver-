@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSBTE Doubt Solver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">0x86</span>
+    <span class="brand-name">MSBTE Doubt Solver</span>
+  </div>
+  <div class="controls">
+    <select id="semesterSelect" class="control"></select>
+    <select id="subjectSelect" class="control"></select>
+    <select id="langSelect" class="control">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="mr">मराठी</option>
+    </select>
+  </div>
+</header>
+
+<main id="mainArea">
+
+  <section id="comingSoon" class="coming-soon hidden">
+    <div class="stamp">COMING SOON</div>
+    <h2 id="comingSoonSubject">Subject not yet available</h2>
+    <p>This subject hasn't been added yet. Content is built subject-by-subject, starting with the ones students ask for most.</p>
+    <button id="voteBtn" class="btn-outline">Vote for this subject</button>
+    <p id="voteCount" class="vote-count"></p>
+  </section>
+
+  <section id="subjectArea" class="subject-area hidden">
+    <nav class="tabs">
+      <button class="tab active" data-tab="notes">Notes</button>
+      <button class="tab" data-tab="pyq">PYQs</button>
+      <button class="tab" data-tab="chat">Ask a Doubt</button>
+    </nav>
+
+    <div id="tab-notes" class="tab-panel active">
+      <div id="notesList"></div>
+    </div>
+
+    <div id="tab-pyq" class="tab-panel">
+      <div id="pyqList"></div>
+    </div>
+
+    <div id="tab-chat" class="tab-panel">
+      <div class="chat-setup">
+        <label for="apiKeyInput">Gemini API key</label>
+        <input type="password" id="apiKeyInput" placeholder="Paste your Gemini API key">
+        <button id="saveKeyBtn" class="btn-outline">Save</button>
+        <p class="hint">Stored only in this browser (localStorage), never sent anywhere except directly to Google's Gemini API.</p>
+      </div>
+      <div id="chatWindow" class="chat-window"></div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Ask a doubt about this subject...">
+        <button id="sendChatBtn" class="btn-solid">Send</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>Built for MSBTE Diploma students · Content is AI-assisted, review status shown per note</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
